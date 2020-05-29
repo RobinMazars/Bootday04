@@ -16,10 +16,10 @@ class FileLoader(object):
         if n >= 0:
             print(data[:n])
         else:
-            print(data)
+            print(data[:n-1:-1])
 
 
 path = "./good.csv"
 fl = FileLoader()
 data = fl.load(path)
-fl.display(data, 1)
+fl.display(data, -1)
